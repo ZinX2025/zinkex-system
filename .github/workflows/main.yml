@@ -11,12 +11,11 @@ jobs:
     steps:
       - name: Checkout kode
         uses: actions/checkout@v3
-
+        working-directory: ./zinkex-system
       - name: Sett opp Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
+        with: node-version: 18
+        working-directory: ./zinkex-system
      - name: Installer avhengigheter
   	  run: npm install
        working-directory: ./zinkex-system
