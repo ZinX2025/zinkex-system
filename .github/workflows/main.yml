@@ -9,17 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout kode
-        uses: actions/checkout@v3
-        working-directory: ./zinkex-system
-      - name: Sett opp Node.js
-        uses: actions/setup-node@v3
-        with: node-version: 18
-        working-directory: ./zinkex-system
-     - name: Installer avhengigheter
-  	  run: npm install
-       working-directory: ./zinkex-system
+    - name: Checkout kode
+      uses: actions/checkout@v3
 
-     - name: Kjør tester
-       run: chmod +x node_modules/.bin/hardhat && npx hardhat test && jest --coverage
-       working-directory: ./zinkex-system
+    - name: Sett opp Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Installer avhengigheter
+      run: npm install
+      working-directory: ./Blocksystem
+
+    - name: Kjør tester
+      run: chmod +x node_modules/.bin/hardhat && npx hardhat test && jest --coverage
+      working-directory: ./Blocksystem
