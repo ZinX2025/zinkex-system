@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout kode
-      uses: actions/checkout@v3
+      - name: Checkout kode
+        uses: actions/checkout@v3
 
-    - name: Sett opp Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
+      - name: Sett opp Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-    - name: Installer avhengigheter
-      run: npm install
-      working-directory: .
+      - name: Installer avhengigheter
+        run: npm install
+        working-directory: .
 
-    - name: Kjør tester
-      run: chmod +x node_modules/.bin/hardhat && npx hardhat test && jest --coverage
-      working-directory: .
+      - name: Kjør tester
+        run: chmod +x node_modules/.bin/hardhat && npx hardhat test && jest --coverage
+        working-directory: .
