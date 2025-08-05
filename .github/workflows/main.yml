@@ -17,8 +17,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Installer avhengigheter
-        run: npm install
+     - name: Installer avhengigheter
+  	  run: npm install
+       working-directory: ./zinkex-system
 
-      - name: Kjør tester
-        run: npm test
+     - name: Kjør tester
+       run: chmod +x node_modules/.bin/hardhat && npx hardhat test && jest --coverage
+       working-directory: ./zinkex-system
