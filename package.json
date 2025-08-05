@@ -2,7 +2,7 @@
   "name": "zinkex-blockchain-system",
   "version": "1.0.0",
   "scripts": {
-   "test": "npx hardhat test && jest --coverage",
+   "test": "chmod +x node_modules/.bin/hardhat && npx hardhat test && jest --coverage",
     "compile": "hardhat compile",
     "deploy": "hardhat run scripts/deploy.js --network localhost"
   },
