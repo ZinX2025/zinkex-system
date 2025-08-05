@@ -7,6 +7,8 @@
     "deploy": "hardhat run scripts/deploy.js --network localhost"
   },
   "devDependencies": {
+    "jest": "^29.0.0"
+}
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",
     "@testing-library/react": "^14.0.0",
     "@walletconnect/web3-provider": "^1.8.0",
